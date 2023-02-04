@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="thingsname">
+
+        <item>口罩和手套1</item>
+        <item>口罩和手套2</item>
+        <item>口罩和手套3</item>
+        <item>口罩和手套4</item>
+        <item>口罩和手套5</item>
+        <item>口罩和手套6</item>
+        <item>口罩和手套7</item>
+        <item>口罩和手套8</item>
+
+        <item>消毒用品1</item>
+        <item>消毒用品2</item>
+        <item>消毒用品3</item>
+        <item>消毒用品4</item>
+
+        <item>饮品</item>
+        <item>饮品</item>
+        <item>饮品</item>
+        <item>饮品</item>
+        <item>饮品</item>
+
+        <item>雨具</item>
+        <item>雨具</item>
+
+        <item>日刊</item>
+        <item>日刊</item>
+        <item>日刊</item>
+        <item>日刊</item>
+        <item>日刊</item>
+        <item>日刊</item>
+
+    </string-array>
+
+</resources>

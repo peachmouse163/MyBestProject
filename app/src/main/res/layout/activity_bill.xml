@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/WhiteSmoke"
+    tools:context=".Bill">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <Button
+                android:id="@+id/btn_bill_return"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/ic_return" />
+
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/search_bill"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/btn_bill_return" />
+
+            <Button
+                android:id="@+id/btn_bill_more"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="20dp"
+                android:layout_toStartOf="@+id/btn_bill_more1"
+                android:background="@drawable/ic_more" />
+
+            <Button
+                android:id="@+id/btn_bill_more1"
+                android:layout_centerVertical="true"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginEnd="10dp"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/ic_more1" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:gravity="center"
+            android:background="#FFA500"
+            android:layout_width="match_parent"
+            android:layout_height="24dp">
+
+            <TextView
+                android:id="@+id/tv_bill_store"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="数据源信息提示" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:gravity="center"
+            android:background="#FAEBD7"
+            android:layout_width="match_parent"
+            android:layout_height="24dp">
+
+            <TextView
+                android:id="@+id/tv_bill_news"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="数据源优惠活动" />
+
+        </RelativeLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_marginBottom="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ListView
+                android:id="@+id/lv_bill_menu"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+            <ListView
+                android:id="@+id/lv_bill_things"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/imgbtn_bill_top"
+        android:background="@drawable/ic_top"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="60dp"
+        android:layout_marginEnd="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <ImageButton
+        android:id="@+id/floating_bill"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="120dp"
+        android:layout_marginEnd="-10dp"
+        android:elevation="10dp"
+        android:src="@drawable/ic_shopping"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_bill_bottom"
+        android:background="#696969"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:id="@+id/tv_bill_moneys"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="25dp"
+            android:text="金额:"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/bill_tv_moneys"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tv_bill_moneys"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@+id/tv_bill_moneys"
+            android:text="默认数据"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+
+        <Button
+            android:elevation="20dp"
+            android:background="@drawable/shape_button"
+            android:id="@+id/btn_bill_settle"
+            android:text="购买"
+            android:layout_margin="10dp"
+            android:layout_alignParentEnd="true"
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

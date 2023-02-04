@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="menuName">
+
+        <item>口罩和手套1</item>
+        <item>消毒用品1</item>
+        <item>饮品1</item>
+        <item>雨具1</item>
+        <item>日刊1</item>
+
+        <item>口罩和手套2</item>
+        <item>消毒用品2</item>
+        <item>饮品2</item>
+        <item>雨具2</item>
+        <item>日刊2</item>
+
+        <item>口罩和手套3</item>
+        <item>消毒用品3</item>
+        <item>饮品3</item>
+        <item>雨具3</item>
+        <item>日刊3</item>
+
+        <item>口罩和手套4</item>
+        <item>消毒用品4</item>
+        <item>饮品4</item>
+        <item>雨具4</item>
+        <item>日刊4</item>
+
+    </string-array>
+
+</resources>

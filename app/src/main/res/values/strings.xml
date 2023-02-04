@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">MyBestProject</string>
+    <string name="title_home">主页</string>
+    <string name="title_dashboard">账单</string>
+    <string name="title_notifications">我的</string>
+    <string name="title_other">其它</string>
+    <string name="title_pay">支付</string>
+    <!--MyAdapter1中的id属性-->
+    <item name="thing" type="id" />
+    <item name="et_id" type="id" />
+
+</resources>
