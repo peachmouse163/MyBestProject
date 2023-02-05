@@ -72,17 +72,36 @@
             android:inputType="numberPassword" />
 
 
-        <Button
-            android:id="@+id/signin_btn_signin"
-            android:layout_marginBottom="10dp"
-            android:elevation="20dp"
-            android:background="@drawable/shape_button"
-            android:layout_marginTop="10dp"
-            android:text="注册"
-            android:textColor="#ffffff"
-            android:textSize="20sp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+        <LinearLayout
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/signin_btn_signin"
+                android:layout_marginBottom="10dp"
+                android:elevation="20dp"
+                android:background="@drawable/shape_button"
+                android:layout_marginTop="10dp"
+                android:text="注册"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <Button
+                android:id="@+id/signin_btn_seller"
+                android:layout_marginBottom="10dp"
+                android:elevation="20dp"
+                android:background="@drawable/shape_button"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:text="商家注册"
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
 
         <LinearLayout
             android:layout_marginTop="100dp"

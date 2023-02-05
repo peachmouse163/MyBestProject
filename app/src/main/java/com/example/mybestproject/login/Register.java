@@ -17,7 +17,7 @@ import com.example.mybestproject.R;
 public class Register extends AppCompatActivity {
 
     private EditText etRegisterName,etRegisterPwd,etRegisterPwd2;
-    private Button btnRegister;
+    private Button btnRegister,btnSellerRegister;
     private ImageButton ibtnReturn;
 
     @Override
@@ -68,6 +68,13 @@ public class Register extends AppCompatActivity {
                 }
             }
         });
+        btnSellerRegister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Register.this,RegisterSellerActivity.class);
+                startActivity(intent);
+            }
+        });
         ibtnReturn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -79,6 +86,7 @@ public class Register extends AppCompatActivity {
 
     private void InitView() {
         btnRegister = findViewById(R.id.signin_btn_signin);
+        btnSellerRegister = findViewById(R.id.signin_btn_seller);
 
         ibtnReturn = findViewById(R.id.register_ibtn_return);
 

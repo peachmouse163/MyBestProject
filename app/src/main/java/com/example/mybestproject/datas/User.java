@@ -2,7 +2,15 @@ package com.example.mybestproject.datas;
 
 public class User {
 
-    private String username,userid;
+    private String username,userid,identity;
+
+    public String getIdentity() {
+        return identity;
+    }
+
+    public void setIdentity(String identity) {
+        this.identity = identity;
+    }
 
     public String getUsername() {
         return username;
@@ -20,8 +28,9 @@ public class User {
         this.userid = userid;
     }
 
-    public User(String username,String userid) {
+    public User(String username,String userid,String identity) {
         this.username = username;
         this.userid = userid;
+        this.identity = identity;
     }
 }

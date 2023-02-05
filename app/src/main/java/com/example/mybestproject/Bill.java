@@ -48,12 +48,10 @@ public class Bill extends AppCompatActivity {
                 if (msg.what == 1){
                     //获得things的文字内容
                     things = (ArrayList<Commodity>) msg.obj;
-                    Log.d("***log", "handleMessage: "+things.get(0).getName());
                     haveThings = true;
                 }else if(msg.what == 0) {
                     //获得menus的文字内容
                     menus = (String[])msg.obj;
-                    Log.d("***log:", "bill-havemenu: "+menus[0]);
                     haveMenu = true;
                 }
             //}

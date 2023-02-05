@@ -32,9 +32,17 @@
         android:theme="@style/Theme.MyBestProject"
         tools:targetApi="31">
         <activity
-            android:name=".Settle"
+            android:name=".login.RegisterSellerActivity"
             android:exported="false" />
-        <!-- 登录活动 -->
+        <activity
+            android:name=".MainSellerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainAdminActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Settle"
+            android:exported="false" /> <!-- 登录活动 -->
         <activity
             android:name=".login.Login"
             android:exported="true"> <!-- 是否允许被其他的application所调用，true为可以，false为不可以 -->
@@ -46,10 +54,10 @@
         </activity> <!-- 注册活动 -->
         <activity
             android:name=".login.Register"
-            android:exported="true" />
-        <!--订单页面-->
-        <activity android:name=".Bill" android:exported="false"/>
-        <!-- 登录后的主页面活动 -->
+            android:exported="true" /> <!-- 订单页面 -->
+        <activity
+            android:name=".Bill"
+            android:exported="false" /> <!-- 登录后的主页面活动 -->
         <activity
             android:name=".MainActivity"
             android:exported="true" />
