@@ -123,10 +123,10 @@
 
     <RelativeLayout
         android:id="@+id/rl_bill_bottom"
-        android:background="#696969"
-        android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
-        android:layout_height="50dp">
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="#696969">
 
         <TextView
             android:id="@+id/tv_bill_moneys"
@@ -150,14 +150,14 @@
             android:textSize="25sp" />
 
         <Button
-            android:elevation="20dp"
-            android:background="@drawable/shape_button"
             android:id="@+id/btn_bill_settle"
-            android:text="购买"
-            android:layout_margin="10dp"
-            android:layout_alignParentEnd="true"
             android:layout_width="65dp"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="10dp"
+            android:background="@drawable/shape_button"
+            android:elevation="20dp"
+            android:text="购买" />
 
     </RelativeLayout>
 

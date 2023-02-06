@@ -20,6 +20,7 @@ import com.example.mybestproject.adapters.MyAdapterThings;
 import com.example.mybestproject.datas.Commodity;
 import com.example.mybestproject.threads.WebThread;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 
@@ -40,7 +41,7 @@ public class Bill extends AppCompatActivity {
     //特殊数据
     private Context context;
         //存商品的communities的数组
-    private ArrayList<Commodity> things = new ArrayList<>();
+    public static ArrayList<Commodity> things = new ArrayList<>();
     private Handler handler = new Handler(){
         @Override
         public void handleMessage(@NonNull Message msg) {
@@ -67,11 +68,11 @@ public class Bill extends AppCompatActivity {
         setContentView(R.layout.activity_bill);
         //初始化组件
         initView();
-        //绑定按钮监听器
-        AddOnClickListener();
         //运行新线程，通过网络json文件，获得货物资源。通过
         WebThread webThread = new WebThread(handler);
         webThread.start();
+        //绑定按钮监听器
+        AddOnClickListener();
         //获得信息  News和Tips
         GetAndChangeText();
         //自定义适配器Adapter并绑定
@@ -113,14 +114,12 @@ public class Bill extends AppCompatActivity {
         btnPay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //获得当前的信息，并通过Intent转给下一个活动界面.
-                //***********
-
-                //***********
-                Intent intent = new Intent(Bill.this,MainActivity.class);
-                //****
-
-                //****
+                //跳转至下一个结账settle界面，订单信息通过访问static属性的things，其中num不为0的。
+                //模拟订单,假数据
+                for (int i = 0; i < 5; i++) {
+                    things.get(i).setNum(1);
+                }
+                Intent intent = new Intent(Bill.this,Settle.class);
                 startActivity(intent);
             }
         });
@@ -149,6 +148,6 @@ public class Bill extends AppCompatActivity {
 
         ibtnTop = findViewById(R.id.imgbtn_bill_top);
 
-        things.add(new Commodity("id","name","description",10,R.drawable.domepicture));
+        things.add(new Commodity("id","name","description",10,R.drawable.domepicture,0));
     }
 }

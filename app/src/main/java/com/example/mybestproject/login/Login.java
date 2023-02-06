@@ -17,6 +17,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.mybestproject.MainActivity;
+import com.example.mybestproject.MainAdminActivity;
 import com.example.mybestproject.MainSellerActivity;
 import com.example.mybestproject.R;
 import com.example.mybestproject.datas.User;
@@ -61,7 +62,7 @@ public class Login extends AppCompatActivity {
         //点击监听器配置
         MyOclickListener();
         //检查register 注册活动是否有传来的值,有的话，获取用户名和密码
-        GetRegisterValue();
+        //GetRegisterValue();废除
     }
 
     private void GetRegisterValue() {
@@ -85,7 +86,7 @@ public class Login extends AppCompatActivity {
                 StringBuilder stringBuilder = new StringBuilder(id);
                 char i = stringBuilder.charAt(0);
                 //开启线程，访问数据，查看用户信息是否正确
-                LoginCheckThread loginCheckThread = new LoginCheckThread(getApplicationContext(),loginCheckHandler);
+                LoginCheckThread loginCheckThread = new LoginCheckThread(loginCheckHandler);
                 loginCheckThread.setUserid(id);
                 loginCheckThread.setUserpassword(pwd);
                 //为接下来的跳转的页面做准备
@@ -94,7 +95,7 @@ public class Login extends AppCompatActivity {
                     case 'a':
                         //访问管理员
                         identity = "admin";
-                        intent = new Intent(Login.this, MainActivity.class);
+                        intent = new Intent(Login.this, MainAdminActivity.class);
                         break;
                     case 'b':
                         //访问买家
@@ -145,14 +146,6 @@ public class Login extends AppCompatActivity {
         });
     }
 
-    //用于监听器中，检查用户名和密码正确的方法。
-    private boolean CheckNamePwd(String id,String pwd) {
-        //将数据发送至服务器，检查正确。根据情况返回true和false
-        name = "汝豪";//★假数据，测试写死
-        user = new User(name,id,identity);
-        return checkFlag;
-    }
-
     private void InitView() {
         btnLogin = findViewById(R.id.login_btn_login);
         btnRegister = findViewById(R.id.login_btn_signin);
@@ -161,6 +154,7 @@ public class Login extends AppCompatActivity {
         etUserPwd = findViewById(R.id.login_et_password);
 
         //★为测试方便，etUserName，默认“汝豪”
-        etUserName.setText("汝豪");
+        etUserName.setText("b1");
+        etUserPwd.setText("123");
     }
 }

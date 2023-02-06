@@ -5,19 +5,27 @@ import java.util.Objects;
 public class Commodity {
 
     private String id,name,description;
-    private int money,pic;
+    private int money,pic,num = 0;
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Commodity commodity = (Commodity) o;
-        return money == commodity.money && pic == commodity.pic && id.equals(commodity.id) && Objects.equals(name, commodity.name) && Objects.equals(description, commodity.description);
+        return money == commodity.money && pic == commodity.pic && num == commodity.num && id.equals(commodity.id) && Objects.equals(name, commodity.name) && Objects.equals(description, commodity.description);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, description, money, pic);
+        return Objects.hash(id, name, description, money, pic, num);
+    }
+
+    public int getNum() {
+        return num;
+    }
+
+    public void setNum(int num) {
+        this.num = num;
     }
 
     public String getId() {
@@ -63,11 +71,12 @@ public class Commodity {
     public Commodity() {
     }
 
-    public Commodity(String id, String name, String description, int money, int pic) {
+    public Commodity(String id, String name, String description, int money, int pic,int num) {
         this.id = id;
         this.name = name;
         this.description = description;
         this.money = money;
         this.pic = pic;
+        this.num = num;
     }
 }

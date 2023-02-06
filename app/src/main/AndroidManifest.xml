@@ -32,6 +32,9 @@
         android:theme="@style/Theme.MyBestProject"
         tools:targetApi="31">
         <activity
+            android:name=".ComplaintActivity"
+            android:exported="false" />
+        <activity
             android:name=".login.RegisterSellerActivity"
             android:exported="false" />
         <activity

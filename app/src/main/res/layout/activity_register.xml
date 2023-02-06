@@ -92,11 +92,11 @@
                 android:id="@+id/signin_btn_seller"
                 android:layout_marginBottom="10dp"
                 android:elevation="20dp"
-                android:background="@drawable/shape_button"
+                android:background="@drawable/shape_buttons"
                 android:layout_marginTop="10dp"
                 android:layout_marginStart="10dp"
                 android:text="商家注册"
-                android:textColor="#ffffff"
+                android:textColor="#40E0D0"
                 android:textSize="18sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>

@@ -37,7 +37,6 @@ public class WebThread extends Thread {
         flag = 0;
         //获取things数据
         GetThingsDatas();
-
         //发送menus数据
         Message messageMenus = new Message();
         messageMenus.what = 0;
@@ -94,7 +93,7 @@ public class WebThread extends Thread {
                 int money = Integer.parseInt(everything.getString("money"));
                 //图片资源，后期改为资源路径。暂时用假数据代替。
                 //String pic = everything.getString("pic");
-                commodities.add(new Commodity(id,name,description,money, R.drawable.domepicture));
+                commodities.add(new Commodity(id,name,description,money, R.drawable.domepicture,0));
                 //log显示获得到的数据
                 Log.d("***log", "parseJSONWithJSONObject: everything:"+"\nid:"+id+"\nname:"+name+"\ndescription:"+description+"\nmoney:"+money);
             }
